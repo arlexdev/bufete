@@ -12,10 +12,10 @@ def feature_item(feature: str) -> rx.Component:
 
 def standard_features() -> rx.Component:
     return rx.vstack(
-        feature_item("40 credits for image generation"),
-        feature_item("Credits never expire"),
-        feature_item("High quality images"),
-        feature_item("Commercial license"),
+        feature_item("Sin acceso a plantillas avanzadas"),
+        feature_item("Sin descarga en Word."),
+        feature_item("Sin revisión legal opcional."),
+        feature_item("Sin soporte prioritario."),
         spacing="3",
         width="100%",
         align_items="start",
@@ -24,11 +24,11 @@ def standard_features() -> rx.Component:
 
 def popular_features() -> rx.Component:
     return rx.vstack(
-        feature_item("250 credits for image generation"),
-        feature_item("+30% Extra free credits"),
-        feature_item("Credits never expire"),
-        feature_item("High quality images"),
-        feature_item("Commercial license"),
+        feature_item("Descarga en PDF y Word."),
+        feature_item("Personalización completa."),
+        feature_item("Revisión legal opcional."),
+        feature_item("Soporte prioritario por email o chat"),
+        feature_item("Guardado ilimitado de contratos en la cuenta del usuario."),
         spacing="3",
         width="100%",
         align_items="start",
@@ -38,18 +38,21 @@ def popular_features() -> rx.Component:
 def pricing_card_standard() -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.icon(tag="check", color="#000", size=25),
+            rx.icon(tag="circle", color="#000", size=50),
             rx.badge(
-                "$19",
+                "$0",
                 color_scheme="gray",
                 size="3",
             ),
             justify="between",
             width="100%"
         ),
-        rx.text("Acceso a plantillas básicas",size="5", weight="bold",color="#000"),
-        rx.text("Obtén plantillas gratis",color_scheme="gray",weight="light",width="400px"),
-
+        rx.vstack(
+            rx.text("Acceso a plantillas básicas",size="5", weight="bold",color="#000"),
+            rx.text("Obtén plantillas gratis",color_scheme="gray",weight="light",width="400px"),
+            width="100%"
+        ),
+        rx.divider(),
         rx.text(
             "Gratis",
             weight="bold",
@@ -83,7 +86,8 @@ def pricing_card_standard() -> rx.Component:
         ),
         spacing="6",
         border=f"1.5px solid {rx.color('gray', 5)}",
-        background=rx.color("gray", 1),
+        bg="fff",
+        #background=rx.color("gray", 1),
         padding="28px",
         width="100%",
         border_radius="24px",
@@ -93,7 +97,7 @@ def pricing_card_standard() -> rx.Component:
 def pricing_card_popular() -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.icon(tag="check", color="#000", size=25),
+            rx.icon(tag="square-square", color="#000", size=50),
             rx.badge(
                 "$19",
                 color_scheme="gray",
@@ -102,8 +106,12 @@ def pricing_card_popular() -> rx.Component:
             justify="between",
             width="100%"
         ),
-        rx.text("Acceso a plantillas básicas",size="5", weight="bold",color="#000"),
-        rx.text("Obtén plantillas gratis",color_scheme="gray",weight="light",width="400px"),
+        rx.vstack(
+            rx.text("Acceso a plantillas básicas",size="5", weight="bold",color="#000"),
+            rx.text("Obtén plantillas gratis",color_scheme="gray",weight="light",width="400px"),
+            width="100%"
+        ),
+        rx.divider(),
         rx.text(
             "Premium",
             weight="bold",
@@ -132,18 +140,18 @@ def pricing_card_popular() -> rx.Component:
             color="#000",
             background_color="#fff",
             border="1px solid #c6c6c6",
-            _hover={"opacity": "0.8"},
+            _hover={"background_color": "#f9f9f9"},
             width="100%"
         ),
         spacing="6",
         border="1px solid #e0e0e0",
-        background=rx.color("gray", 1),
+        background=rx.color("gray", 2),
         padding="28px",
         width="100%",
         border_radius="24px",
     )
 
-def experience() -> rx.Component:
+def plans() -> rx.Component:
     return rx.center(
         rx.section(
             rx.vstack(
@@ -185,7 +193,7 @@ def experience() -> rx.Component:
             style=styles.max_width_style,
             width="100%",
             size="2",
-            id="experiencia",
+            id="precios",
         ),
         width="100%"
     )

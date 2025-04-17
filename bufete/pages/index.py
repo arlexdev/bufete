@@ -1,12 +1,8 @@
 import reflex as rx
-
 from ..views.call_to_action import call_to_action
-#from ..views.education import education
-#from ..views.technology import technology
-#from ..views.clients import clients
-from ..views.works import works
-from ..views.experience import experience
-from ..views.about import about
+from ..views.how_it_works import how_it_works
+from ..views.plans import plans
+from ..views.catalog import catalog
 from ..views.hero import hero
 from ..components.footer import footer
 from ..components.navbar import navbar
@@ -18,10 +14,10 @@ def index() -> rx.Component:
             navbar(),
             rx.vstack(
                 hero(),
-                about(),
-                works(),
+                catalog(),
+                how_it_works(),
                 #clients(),
-                experience(),
+                plans(),
                 #education(),
                 #technology(),
                 call_to_action(),

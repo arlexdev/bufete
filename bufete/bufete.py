@@ -1,11 +1,10 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
-
 import reflex as rx
-
-from bufete.pages.index import index
-#from bufete.pages.project_ed import project_ed
-
 from .styles import styles
+from bufete.pages.index import index
+from .pages.auth.login import login
+from .pages.auth.signup import signup
+from bufete.pages.templates.compra_venta import compra_venta
+from bufete.pages.templates.llenar.compraventa.llenar_compra_venta import llenar_compra_venta
 
 
 app = rx.App(
@@ -38,4 +37,7 @@ app.add_page(
         {"name": "og:image", "content": preview}
     ]
 )
-#app.add_page(project_ed, route="/project_ed")
+app.add_page(login)
+app.add_page(signup)
+app.add_page(compra_venta)
+app.add_page(llenar_compra_venta)

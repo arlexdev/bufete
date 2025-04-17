@@ -28,31 +28,55 @@ def navbar() -> rx.Component:
                 ),
                 rx.hstack(
                     navbar_link("Inicio", "/#"),
-                    navbar_link("Plantillas", "/#sobre-mi"),
-                    navbar_link("Cómo funciona", "/#proyectos"),
-                    navbar_link("Precios", "/#experiencia"),
+                    navbar_link("Plantillas", "/#plantillas"),
+                    navbar_link("Cómo funciona", "/#como-funciona"),
+                    navbar_link("Precios", "/#precios"),
                     navbar_link("Sobre nosotros", "/#formación"),
                     #navbar_link("Contacto", "/#contacto"),
                     justify="end",
                     align="center",
                     spacing="5",
                 ),
-                rx.button(
-                    "Iniciar sesión",
-                    size="3",
-                    on_click=lambda: rx.redirect(
-                        "", is_external=True),
-                    background_color="#FFFFFF",
-                    border="1px solid #c6c6c6",
-                    color="#000000",
-                    _hover={"opacity": "0.8"},
-                    #_hover={
-                    #    "background_color": "#111111",
-                    #    "color": "#FFFFFF"
-                    #},
+                rx.hstack(
+                    rx.button(
+                        "Iniciar sesión",
+                        size="3",
+                        on_click=lambda: rx.redirect("/login"),
+                        background_color="#FFFFFF",
+                        border="1px solid #c6c6c6",
+                        color="#000000",
+                        _hover={"opacity": "0.8"},
+                        #_hover={
+                        #    "background_color": "#111111",
+                        #    "color": "#FFFFFF"
+                        #},
+                    ),
+                    rx.button(
+                        rx.text(
+                            "Únete gratis",
+                            size=rx.breakpoints(
+                            initial="3",
+                            sm="3",
+                            lg="3"
+                            ),
+                        ),
+                        on_click=lambda: rx.redirect("/signup"),
+                        size=rx.breakpoints(
+                            initial="3",
+                            sm="3",
+                            lg="3"
+                        ),
+                        background_color="#000",
+                        border="1px solid #c6c6c6",
+                        color="#fff",
+                        _hover={"opacity": "0.8"},
+                    ),
+                    spacing="4",
+                    justify="end",
                 ),
                 justify="between",
                 align_items="center",
+                width="100%"
             ),
         ),
         rx.mobile_and_tablet(

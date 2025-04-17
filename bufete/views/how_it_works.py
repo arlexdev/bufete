@@ -1,7 +1,7 @@
 import reflex as rx
 from ..styles import styles
 
-def works() -> rx.Component:
+def how_it_works() -> rx.Component:
     return rx.center(
         rx.section(
             rx.vstack(
@@ -134,7 +134,7 @@ def works() -> rx.Component:
                 spacing="8",
             ),
             style=styles.max_width_style,
-            id="proyectos",
+            id="como-funciona",
             size="2",
         ),
         width="100%"
