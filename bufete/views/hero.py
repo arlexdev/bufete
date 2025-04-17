@@ -107,7 +107,7 @@ def hero() -> rx.Component:
                                     lg="4"
                                     ),
                                 ),
-                                on_click=lambda: rx.redirect("https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=arlexdev@gmail.com", is_external=True),
+                                on_click=lambda: rx.redirect("#plantillas"),
                                 size=rx.breakpoints(
                                     initial="3",
                                     sm="4",
@@ -132,7 +132,7 @@ def hero() -> rx.Component:
                                     sm="4",
                                     lg="4"
                                 ),
-                                on_click=lambda: rx.redirect("#proyectos"),
+                                on_click=lambda: rx.redirect("#precios"),
                                 color="#000",
                                 background_color="#fff",
                                 border="1px solid #c6c6c6",

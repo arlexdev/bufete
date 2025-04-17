@@ -1,6 +1,24 @@
 import reflex as rx
 from ..styles.styles import header_style
 
+def nav_icon(icon_name, href, tooltip):
+    return rx.hover_card.root(
+        rx.hover_card.trigger(
+            rx.link(
+                rx.icon(icon_name, size=20, style={
+                    "transition": "transform 0.2s",
+                    "_hover": {"transform": "rotate(180deg)"}
+                }),
+                href=href,
+                style={"padding": "0.5em"},
+            )
+        ),
+        rx.hover_card.content(
+            rx.text(tooltip),
+            side="bottom",
+        ),
+    )
+
 def navbar_link(text: str, url: str) -> rx.Component:
     return rx.link(
         rx.text(text, size="3"),
