@@ -21,13 +21,13 @@ def footer_item(text: str, href: str) -> rx.Component:
 def footer_items_1() -> rx.Component:
     return rx.flex(
         rx.heading(
-            "PRODUCTS", size="4", weight="bold", as_="h3",color="#000"
+            "Plantillas", size="4", weight="bold", as_="h3",color="#000"
         ),
-        footer_item("Web Design", "/#"),
-        footer_item("Web Development", "/#"),
-        footer_item("E-commerce", "/#"),
-        footer_item("Content Management", "/#"),
-        footer_item("Mobile Apps", "/#"),
+        footer_item("Gratis", "/#"),
+        footer_item("Premium", "/#"),
+        #footer_item("E-commerce", "/#"),
+        #footer_item("Content Management", "/#"),
+        #footer_item("Mobile Apps", "/#"),
         spacing="4",
         text_align=["center", "center", "start"],
         flex_direction="column",
@@ -37,13 +37,12 @@ def footer_items_1() -> rx.Component:
 def footer_items_2() -> rx.Component:
     return rx.flex(
         rx.heading(
-            "RESOURCES", size="4", weight="bold", as_="h3",color="#000"
+            "Recursos", size="4", weight="bold", as_="h3",color="#000"
         ),
-        footer_item("Blog", "/#"),
-        footer_item("Case Studies", "/#"),
-        footer_item("Whitepapers", "/#"),
-        footer_item("Webinars", "/#"),
-        footer_item("E-books", "/#"),
+        footer_item("Plantillas", "/#"),
+        footer_item("Cómo funciona", "/#"),
+        footer_item("Precios", "/#"),
+        footer_item("Contacto", "/#"),
         spacing="4",
         text_align=["center", "center", "start"],
         flex_direction="column",

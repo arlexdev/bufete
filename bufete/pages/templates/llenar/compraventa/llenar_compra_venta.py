@@ -55,7 +55,8 @@ def form_step_1():
                     name="uso",
                     required=True,
                 ),
-                rx.button("Siguiente", type="submit"),
+                width="100%",
+                spacing="5"
             ),
             on_submit=CompraVentaState.siguiente,
             reset_on_submit=True,
@@ -118,13 +119,19 @@ def llenar_compra_venta():
                         rx.vstack(
                             rx.hstack(
                                 rx.badge(
-                                    "$50",
+                                    "Progreso:",
                                     size="3",
-                                    bg="#fff",
-                                    border="1px dashed #000",
-                                    #border_radius="16px",
+                                    style={"background": "#fff", "border": "1px dashed #000"},
                                 ),
-                                rx.badge("Productividad",size="3"),
+                                rx.progress(
+                                    value=50,
+                                    fill_color="#000",
+                                    width="200px",
+                                    size="3"
+                                ),
+                                # rx.badge("Productividad", size="3"),
+                                align_items="center",
+                                width="100%"
                             ),
                             rx.heading("Contrato de Compra y Venta", size="8"),
                             form_step_1(),
@@ -134,15 +141,15 @@ def llenar_compra_venta():
                                         "Anterior",
                                         size=rx.breakpoints(
                                         initial="3",
-                                        sm="4",
-                                        lg="4"
+                                        sm="3",
+                                        lg="3"
                                         ),
                                     ),
                                     on_click=lambda: rx.redirect("/templates/llenar/llenar-compra-venta"),
                                     size=rx.breakpoints(
                                         initial="3",
-                                        sm="4",
-                                        lg="4"
+                                        sm="3",
+                                        lg="3"
                                     ),
                                     background_color="#000",
                                     border="1px solid #c6c6c6",
@@ -154,14 +161,14 @@ def llenar_compra_venta():
                                         "Siguiente",
                                         size=rx.breakpoints(
                                         initial="3",
-                                        sm="4",
-                                        lg="4"
+                                        sm="3",
+                                        lg="3"
                                         ),
                                     ),
                                     size=rx.breakpoints(
                                         initial="3",
-                                        sm="4",
-                                        lg="4"
+                                        sm="3",
+                                        lg="3"
                                     ),
                                     on_click=lambda: rx.redirect("#proyectos"),
                                     color="#000",
@@ -175,14 +182,14 @@ def llenar_compra_venta():
                                         "Pagar y Descargar",
                                         size=rx.breakpoints(
                                         initial="3",
-                                        sm="4",
-                                        lg="4"
+                                        sm="3",
+                                        lg="3"
                                         ),
                                     ),
                                     size=rx.breakpoints(
                                         initial="3",
-                                        sm="4",
-                                        lg="4"
+                                        sm="3",
+                                        lg="3"
                                     ),
                                     on_click=lambda: rx.redirect("#proyectos"),
                                     color_scheme="green",
@@ -251,7 +258,7 @@ def llenar_compra_venta():
                         sm="2.5em",
                         lg="3.5em"
                     ),
-                    padding_top="6rem",
+                    #padding_top="6rem",
                     spacing="8"
                 ),
                 style=styles.max_width_style,

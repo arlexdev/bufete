@@ -1,5 +1,6 @@
 import reflex as rx
-from ..views.call_to_action import call_to_action
+from bufete.views.questions import questions
+#from ..views.call_to_action import call_to_action
 from ..views.how_it_works import how_it_works
 from ..views.plans import plans
 from ..views.catalog import catalog
@@ -18,9 +19,10 @@ def index() -> rx.Component:
                 how_it_works(),
                 #clients(),
                 plans(),
+                questions(),
                 #education(),
                 #technology(),
-                call_to_action(),
+                #call_to_action(),
                 #services(),
                 footer(),
                 width="100%"

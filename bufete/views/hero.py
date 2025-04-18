@@ -57,7 +57,7 @@ def hero() -> rx.Component:
                             lg="3"
                             ),
                         ),
-                        href="https://www.linkedin.com/in/arlexdev/",
+                        href="",
                         is_external=True,
                         aria_label="Ver perfil de LinkedIn"
                     ),
